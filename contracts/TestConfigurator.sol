@@ -28,10 +28,10 @@ contract ICO {
   function setHardcap(uint newHardcap) public;
   function setWallet(address newWallet) public;
   function setBountyTokensWallet(address newBountyWallet) public;
-  function setAdvisorsTokenWallet(address newAdvisorsTokenWallet) public;
+  function setAdvisorsTokensWallet(address newAdvisorsTokenWallet) public;
   function setDevelopersTokensWallet(address newDevelopersTokensWallet) public;
   function setBountyTokensPercent(uint newBountyTokensPercent) public;
-  function setAdvisorsTokenPercent(uint newAdvisorsTokenPercent) public;
+  function setAdvisorsTokensPercent(uint newAdvisorsTokenPercent) public;
   function setDevelopersTokensPercent(uint newDevelopersTokensPercent) public;
   function setToken(address newToken) public;
   function transferOwnership(address newOwner) public;
