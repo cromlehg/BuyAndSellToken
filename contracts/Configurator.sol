@@ -28,7 +28,7 @@ contract Configurator is Ownable {
     preICO.setHardcap(16000000000000000000000);
     preICO.setSoftcap(500000000000000000000);
     preICO.addMilestone(1, 40);
-    preICO.addMilestone(3, 30);
+    preICO.addMilestone(13, 30);
 
     token.setSaleAgent(preICO);
 
