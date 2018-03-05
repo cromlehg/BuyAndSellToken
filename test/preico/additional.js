@@ -56,20 +56,11 @@ export default function (Token, Crowdsale, wallets) {
     balance.should.bignumber.equal(100);
   });
 
-   it('should mintTokensExternal by Direct Mint Agent', async function () {
+  it('should mintTokensExternal by Direct Mint Agent', async function () {
     const owner = await crowdsale.owner();
     await crowdsale.setDirectMintAgent(wallets[3], {from: owner});
     await crowdsale.mintTokensExternal(wallets[6], 100, {from: wallets[3]}).should.be.fulfilled;
     const balance = await token.balanceOf(wallets[6]);
     balance.should.bignumber.equal(100);
   });
-/*
-  it('should use wallet for investments', async function () {
-    const investment = ether(1);
-    const pre = web3.eth.getBalance(this.wallet);
-    await crowdsale.sendTransaction({value: investment, from: wallets[1]});
-    const post = web3.eth.getBalance(this.wallet);
-    post.minus(pre).should.bignumber.equal(investment);
-  });
-*/
 }
