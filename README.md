@@ -1,5 +1,7 @@
 ![BUY&SELL Token](logo.png "BUY&SELL Token")
 
+http://buyandsell.io
+
 # BUY&SELL Token smart contract
 
 * _Standard_        : [ERC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
@@ -54,10 +56,10 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Main network configuration
 
-* _Bounty tokens wallet_        : 
-* _Developers tokens wallet_    : 
-* _Advisors tokens wallet_      :
-* _Contracts manager_           :
+* _Bounty tokens wallet_        : 0x040Dd0f72c2350DCC043E45b8f9425E16190D7e3
+* _Developers tokens wallet_    : 0x9fb9B9a8ABdA6626d5d739E7A1Ed80F519ac156D
+* _Advisors tokens wallet_      : 0x9dd06c9697c5c4fc9D4D526b4976Bf5A9960FE55
+* _Contracts manager_           : 0xb3e3fFeE7bcEC75cbC98bf6Fa5Eb35488b0a0904
 
 ### Links
 1. _Token_ -
@@ -75,8 +77,8 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 * _Base price_                  : 1 ETH = 9000 Tokens
 * _Hardcap_                     : 16 000 ETH
 * _Softcap_                     : 500 ETH
-* _Start_                       : 
-* _Wallet_                      : 
+* _Start_                       : 01 May 2018 00:00:00 GMT
+* _Wallet_                      : 0x1cbeeCf1b8a71E7CEB7Bc7dFcf76f7aA1092EA42
 
 ##### Milestones
 1. 1 day, bonus +40%
@@ -86,8 +88,8 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 * _Minimal insvested limit_     : 0.1 ETH
 * _Base price_                  : 1 ETH = 4500 Tokens
 * _Hardcap_                     : 24 000 ETH
-* _Start_                       : 
-* _Wallet_                      : 
+* _Start_                       : 01 Jun 2018 00:00:00 GMT
+* _Wallet_                      : 0x4cF77fF6230A31280F886b5D7dc7324c22443eB5
  
 ##### Milestones
 1. 7 days, bonus +25%

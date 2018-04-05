@@ -21,7 +21,7 @@ contract('Configurator integration test', function (accounts) {
   let preico;
   let ico;
 
-  const manager = '0x675eDE27cafc8Bd07bFCDa6fEF6ac25031c74766';
+  const manager = '0xb3e3fFeE7bcEC75cbC98bf6Fa5Eb35488b0a0904';
 
   before(async function () {
     // Advance to the next block to correctly read time in the solidity "now" function interpreted by testrpc
@@ -55,9 +55,9 @@ contract('Configurator integration test', function (accounts) {
 
   it('preICO and ICO should have start time as described in README', async function () {
     const preicoStart = await preico.start();
-    preicoStart.should.bignumber.equal((new Date('12 Feb 2018 00:00:00 GMT')).getTime() / 1000);
+    preicoStart.should.bignumber.equal((new Date('01 May 2018 00:00:00 GMT')).getTime() / 1000);
     const icoStart = await ico.start();
-    icoStart.should.bignumber.equal((new Date('10 Mar 2018 00:00:00 GMT')).getTime() / 1000);
+    icoStart.should.bignumber.equal((new Date('01 Jun 2018 00:00:00 GMT')).getTime() / 1000);
   });
 
   it ('preICO and ICO should have price as described in README', async function () {
@@ -97,18 +97,18 @@ contract('Configurator integration test', function (accounts) {
 
   it ('preICO and ICO should have wallets as described in README', async function () {
     const preicoWallet = await preico.wallet();
-    preicoWallet.should.bignumber.equal('0xa86780383E35De330918D8e4195D671140A60A74');
+    preicoWallet.should.bignumber.equal('0x1cbeeCf1b8a71E7CEB7Bc7dFcf76f7aA1092EA42');
     const icoWallet = await ico.wallet();
-    icoWallet.should.bignumber.equal('0x98882D176234AEb736bbBDB173a8D24794A3b085');
+    icoWallet.should.bignumber.equal('0x4cF77fF6230A31280F886b5D7dc7324c22443eB5');
   });
 
   it ('bounty wallet, advisors wallet and developers wallet should be as described in README', async function () {
     const bountyWallet = await ico.bountyTokensWallet();
-    bountyWallet.should.bignumber.equal('0x28732f6dc12606D529a020b9ac04C9d6f881D3c5');
+    bountyWallet.should.bignumber.equal('0x040Dd0f72c2350DCC043E45b8f9425E16190D7e3');
     const advisorsWallet = await ico.advisorsTokensWallet();
-    advisorsWallet.should.bignumber.equal('0x28732f6dc12606D529a020b9ac04C9d6f881D3c5');
+    advisorsWallet.should.bignumber.equal('0x9dd06c9697c5c4fc9D4D526b4976Bf5A9960FE55');
     const developersWallet = await ico.developersTokensWallet();
-    developersWallet.should.bignumber.equal('0x28732f6dc12606D529a020b9ac04C9d6f881D3c5');
+    developersWallet.should.bignumber.equal('0x9fb9B9a8ABdA6626d5d739E7A1Ed80F519ac156D');
   });
 });
 
