@@ -49,10 +49,9 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Tokens distribution
 
-* _Bounty tokens percent_       : 3%
-* _Developers tokens percent_   : 20%
-* _Advisors_                    : 2%
-* _For sale tokens percent_     : 75%
+* _Bounty tokens_               :  7 200 000
+* _Developers tokens_           : 48 000 000
+* _Advisors tokens_             :  4 800 000
 
 ## Main network configuration
 
