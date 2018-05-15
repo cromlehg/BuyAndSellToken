@@ -96,7 +96,7 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 3. 14 days, bonus +10% 
 
 
-## Ropsten network configuration 
+## Ropsten network configuration #1
 
 ### links
 1. _Token_ - https://ropsten.etherscan.io/address/0x8e8f3396138bbd0245f2b06bb5849a0063c50b6d
@@ -183,3 +183,68 @@ https://ropsten.etherscan.io/tx/0x9e2d7f50a5398cd287782c42907be60d2ffc419736aed4
 
 ##### Token holders
 https://ropsten.etherscan.io/token/0x8e8f3396138bbd0245f2b06bb5849a0063c50b6d#balances
+
+
+## Ropsten network configuration #2
+
+### links
+1. _Token_ - https://ropsten.etherscan.io/address/0x0f76b9edb6acd0db236cd1b92e63e7afa8bb96f4
+2. _PreICO_ - https://ropsten.etherscan.io/address/0x6291eac2ce95e7ea8f63ed6c62170daf6cedf5e4
+3. _ICO_ - https://ropsten.etherscan.io/address/0xb43638f404f4165677e24601ea3bc7ad7b0a5302
+
+
+### Crowdsale stages
+
+#### PreICO
+
+* _Minimal insvested limit_     : 0.1 ETH
+* _Base price_                  : 1 ETH = 9000 Tokens
+* _Hardcap_                     : 1.6 ETH
+* _Softcap_                     : 0.5 ETH
+* _Start_                       : 15 May 2018 00:00:00 GMT
+* _Wallet_                      : 0x8fd94be56237ea9d854b23b78615775121dd1e82
+* _Bounty tokens wallet_        : 0x8Ba7Aa817e5E0cB27D9c146A452Ea8273f8EFF29
+* _Developers tokens wallet_    : 0xaa8ed6878a202eF6aFC518a64D2ccB8D73f1f2Ca
+* _Advisors tokens wallet_      : 0x24a7774d0eba02846580A214eeca955214cA776C
+* _Bounty tokens_               :  7 200 000
+* _Developers tokens_           : 48 000 000
+* _Advisors tokens_             :  4 800 000
+
+_Milestones_
+
+1. 1 day, bonus +40%
+2. 13 days, bonus +30%
+
+##### Purchasers
+
+* 1 ETH => 12,600 tokens (40% bonus), gas = 134895
+https://ropsten.etherscan.io/tx/0x33b194f2c1486a5cd48e0f25b0ca0e1da3865e21540b282eca4a626efc5bb938
+
+##### Service operations
+
+* finish, gas = 47551
+https://ropsten.etherscan.io/tx/0xe44ad3ceec8fc7bbdec710b7b542c64ad0d0b2e4aaa191a877b6034dd998c902
+
+#### ICO
+
+* _Minimal insvested limit_     : 0.1 ETH
+* _Base price_                  : 1 ETH = 4500 Tokens
+* _Hardcap_                     : 2.4 ETH
+* _Wallet_                      : 0x8fd94be56237ea9d854b23b78615775121dd1e82
+* _Start_                       : 15 May 2018 00:00:00 GMT
+
+_Milestones_
+
+1. 7 days, bonus +25%
+2. 7 days, bonus +15%
+3. 14 days, bonus +10% 
+
+##### Purchasers
+  
+* 1 ETH => 5,625 tokens (25% bonus), gas = 86088
+https://ropsten.etherscan.io/tx/0x58a3f08709c84f39596cb49dbc57f1cc4df2e43600bfcc202e2578cb27da36f1
+
+##### Service operations
+
+* finish, gas = 31333
+https://ropsten.etherscan.io/tx/0xc6e9edb6cbec51cb53c6bc700f6f814f622a90aaed510639227653d429430b3c
