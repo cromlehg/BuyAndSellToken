@@ -30,9 +30,9 @@ contract Configurator is Ownable {
     preICO.setBountyTokensWallet(0x040Dd0f72c2350DCC043E45b8f9425E16190D7e3);
     preICO.setAdvisorsTokensWallet(0x9dd06c9697c5c4fc9D4D526b4976Bf5A9960FE55);
     preICO.setDevelopersTokensWallet(0x9fb9B9a8ABdA6626d5d739E7A1Ed80F519ac156D);
-    preICO.setBountyTokensPercent(7200000000000000000000000);
-    preICO.setAdvisorsTokensPercent(4800000000000000000000000);
-    preICO.setDevelopersTokensPercent(48000000000000000000000000);
+    preICO.setBountyTokens(7200000000000000000000000);
+    preICO.setAdvisorsTokens(4800000000000000000000000);
+    preICO.setDevelopersTokens(48000000000000000000000000);
     preICO.addMilestone(1, 40);
     preICO.addMilestone(13, 30);
 
@@ -51,7 +51,7 @@ contract Configurator is Ownable {
     ico.setWallet(0x4cF77fF6230A31280F886b5D7dc7324c22443eB5);
     ico.setStart(1527811200);
     ico.setHardcap(24000000000000000000000);
-    
+
     preICO.setNextSaleAgent(ico);
 
     address manager = 0xb3e3fFeE7bcEC75cbC98bf6Fa5Eb35488b0a0904;
