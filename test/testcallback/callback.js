@@ -37,12 +37,6 @@ export default function (Token, Crowdsale, CallbackTest, wallets) {
     await crowdsale.addMilestone(7, 15);
     await crowdsale.addMilestone(14, 10);
     await crowdsale.setWallet(this.wallet);
-    await crowdsale.setBountyTokensWallet(this.BountyTokensWallet);
-    await crowdsale.setAdvisorsTokensWallet(this.AdvisorsTokensWallet);
-    await crowdsale.setDevelopersTokensWallet(this.DevelopersTokensWallet);
-    await crowdsale.setBountyTokensPercent(this.BountyTokensPercent);
-    await crowdsale.setAdvisorsTokensPercent(this.AdvisorsTokensPercent);
-    await crowdsale.setDevelopersTokensPercent(this.DevelopersTokensPercent);
   });
 
   it ('transfer should call tokenFallback for registered contract', async function () {

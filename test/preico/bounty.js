@@ -26,39 +26,32 @@ export default function (Token, Crowdsale, wallets) {
     await crowdsale.setToken(token.address);
     await crowdsale.setStart(latestTime());
     await crowdsale.setPrice(this.price);
+    await crowdsale.setSoftcap(this.softcap);
     await crowdsale.setHardcap(this.hardcap);
     await crowdsale.setMinInvestedLimit(this.minInvestedLimit);
-    await crowdsale.addMilestone(7, 25);
-    await crowdsale.addMilestone(7, 15);
-    await crowdsale.addMilestone(14, 10);
+    await crowdsale.addMilestone(1, 40);
+    await crowdsale.addMilestone(13, 30);
     await crowdsale.setWallet(this.wallet);
     await crowdsale.setBountyTokensWallet(wallets[3]);
     await crowdsale.setAdvisorsTokensWallet(wallets[4]);
     await crowdsale.setDevelopersTokensWallet(wallets[5]);
-    await crowdsale.setBountyTokensPercent(this.BountyTokensPercent);
-    await crowdsale.setAdvisorsTokensPercent(this.AdvisorsTokensPercent);
-    await crowdsale.setDevelopersTokensPercent(this.DevelopersTokensPercent);
-
+    await crowdsale.setBountyTokens(this.BountyTokens);
+    await crowdsale.setAdvisorsTokens(this.AdvisorsTokens);
+    await crowdsale.setDevelopersTokens(this.DevelopersTokens);
   });
 
-  it('should correctly calculate bonuses for founders and bounty', async function () {
-    await crowdsale.sendTransaction({value: ether(1), from: wallets[1]});
-    await crowdsale.sendTransaction({value: ether(99), from: wallets[2]});
+  it('should correctly mint bonuses for bounty, advisors and developers just once', async function () {
     const owner = await crowdsale.owner();
-    await crowdsale.finish({from: owner});
+    await crowdsale.mintExtraTokens({from: owner});
 
-    const firstInvestorTokens = await token.balanceOf(wallets[1]);
-    const secondInvestorTokens = await token.balanceOf(wallets[2]);
     const bountyTokens = await token.balanceOf(wallets[3]);
     const advisorsTokens = await token.balanceOf(wallets[4]);
     const developersTokens = await token.balanceOf(wallets[5]);
-    const totalTokens = firstInvestorTokens
-      .plus(secondInvestorTokens)
-      .plus(bountyTokens)
-      .plus(advisorsTokens)
-      .plus(developersTokens);
-    assert.equal(bountyTokens.div(totalTokens), this.BountyTokensPercent / 100);
-    assert.equal(advisorsTokens.div(totalTokens), this.AdvisorsTokensPercent / 100);
-    assert.equal(developersTokens.div(totalTokens), this.DevelopersTokensPercent / 100);
+
+    bountyTokens.should.bignumber.equal(this.BountyTokens);
+    advisorsTokens.should.bignumber.equal(this.AdvisorsTokens);
+    developersTokens.should.bignumber.equal(this.DevelopersTokens);
+
+    await crowdsale.mintExtraTokens({from: owner}).should.be.rejectedWith(EVMRevert);
   });
 }

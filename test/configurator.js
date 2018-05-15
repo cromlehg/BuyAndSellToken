@@ -38,6 +38,7 @@ contract('Configurator integration test', function (accounts) {
     ico = await ICO.at(icoAddress);
   });
 
+
   it('contracts should have token address', async function () {
     const tokenOwner = await token.owner();
     tokenOwner.should.bignumber.equal(manager);
@@ -86,13 +87,13 @@ contract('Configurator integration test', function (accounts) {
     icoMinInvest.should.bignumber.equal(ether(0.1));
   });
 
-  it ('bounty, advisors, developers percent should be as described in README', async function () {
-    const bountyPercent = await ico.bountyTokensPercent();
-    bountyPercent.should.bignumber.equal(3);
-    const advisorsPercent = await ico.advisorsTokensPercent();
-    advisorsPercent.should.bignumber.equal(2);
-    const developersPercent = await ico.developersTokensPercent();
-    developersPercent.should.bignumber.equal(20);
+  it ('bounty, advisors, developers tokens should be as described in README', async function () {
+    const bountyTokens = await preico.bountyTokens();
+    bountyTokens.should.bignumber.equal(tokens(7200000));
+    const advisorsTokens = await preico.advisorsTokens();
+    advisorsTokens.should.bignumber.equal(tokens(4800000));
+    const developersTokens = await preico.developersTokens();
+    developersTokens.should.bignumber.equal(tokens(48000000));
   });
 
   it ('preICO and ICO should have wallets as described in README', async function () {
@@ -103,12 +104,13 @@ contract('Configurator integration test', function (accounts) {
   });
 
   it ('bounty wallet, advisors wallet and developers wallet should be as described in README', async function () {
-    const bountyWallet = await ico.bountyTokensWallet();
+    const bountyWallet = await preico.bountyTokensWallet();
     bountyWallet.should.bignumber.equal('0x040Dd0f72c2350DCC043E45b8f9425E16190D7e3');
-    const advisorsWallet = await ico.advisorsTokensWallet();
+    const advisorsWallet = await preico.advisorsTokensWallet();
     advisorsWallet.should.bignumber.equal('0x9dd06c9697c5c4fc9D4D526b4976Bf5A9960FE55');
-    const developersWallet = await ico.developersTokensWallet();
+    const developersWallet = await preico.developersTokensWallet();
     developersWallet.should.bignumber.equal('0x9fb9B9a8ABdA6626d5d739E7A1Ed80F519ac156D');
   });
+
 });
 

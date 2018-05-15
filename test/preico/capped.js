@@ -32,6 +32,12 @@ export default function (Token, Crowdsale, wallets) {
     await crowdsale.addMilestone(1, 40);
     await crowdsale.addMilestone(13, 30);
     await crowdsale.setWallet(this.wallet);
+    await crowdsale.setBountyTokensWallet(this.BountyTokensWallet);
+    await crowdsale.setAdvisorsTokensWallet(this.AdvisorsTokensWallet);
+    await crowdsale.setDevelopersTokensWallet(this.DevelopersTokensWallet);
+    await crowdsale.setBountyTokens(this.BountyTokens);
+    await crowdsale.setAdvisorsTokens(this.AdvisorsTokens);
+    await crowdsale.setDevelopersTokens(this.DevelopersTokens);
   });
 
   it('should accept payments within hardcap', async function () {

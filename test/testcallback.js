@@ -22,12 +22,6 @@ function config() {
   this.hardcap = ether(24000);
   this.minInvestedLimit = ether(0.1);
   this.wallet = '0x98882D176234AEb736bbBDB173a8D24794A3b085';
-  this.BountyTokensWallet = '0x28732f6dc12606D529a020b9ac04C9d6f881D3c5';
-  this.AdvisorsTokensWallet = '0x28732f6dc12606D529a020b9ac04C9d6f881D3c5';
-  this.DevelopersTokensWallet = '0x28732f6dc12606D529a020b9ac04C9d6f881D3c5';
-  this.BountyTokensPercent = 2;
-  this.AdvisorsTokensPercent = 3;
-  this.DevelopersTokensPercent = 20;
 
   // variables for additional testing convinience
   this.end = this.start + duration.days(this.period);
