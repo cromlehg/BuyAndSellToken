@@ -23,7 +23,7 @@ contract Configurator is Ownable {
 
     token.setSaleAgent(preICO);
 
-    preICO.setStart(1525132800);
+    preICO.setStart(1526428800); // 16 May 2018 00:00:00 GMT
     preICO.addMilestone(1, 40);
     preICO.addMilestone(13, 30);
     preICO.setToken(token);
@@ -42,7 +42,7 @@ contract Configurator is Ownable {
 
     preICO.mintExtraTokens();
 
-    ico.setStart(1527811200);
+    ico.setStart(1529107200); // 16 Jun 2018 00:00:00 GMT
     ico.addMilestone(7, 25);
     ico.addMilestone(7, 15);
     ico.addMilestone(14, 10);

@@ -76,7 +76,7 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 * _Base price_                  : 1 ETH = 9000 Tokens
 * _Hardcap_                     : 16 000 ETH
 * _Softcap_                     : 500 ETH
-* _Start_                       : 01 May 2018 00:00:00 GMT
+* _Start_                       : 16 May 2018 00:00:00 GMT
 * _Wallet_                      : 0x1cbeeCf1b8a71E7CEB7Bc7dFcf76f7aA1092EA42
 
 ##### Milestones
@@ -87,7 +87,7 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 * _Minimal insvested limit_     : 0.1 ETH
 * _Base price_                  : 1 ETH = 4500 Tokens
 * _Hardcap_                     : 24 000 ETH
-* _Start_                       : 01 Jun 2018 00:00:00 GMT
+* _Start_                       : 16 Jun 2018 00:00:00 GMT
 * _Wallet_                      : 0x4cF77fF6230A31280F886b5D7dc7324c22443eB5
  
 ##### Milestones
