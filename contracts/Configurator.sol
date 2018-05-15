@@ -14,13 +14,13 @@ contract Configurator is Ownable {
   ICO public ico;
 
   function deploy() public onlyOwner {
-      
+
     address manager = 0xb3e3fFeE7bcEC75cbC98bf6Fa5Eb35488b0a0904;
 
     token = new BuyAndSellToken();
     preICO = new PreICO();
     ico = new ICO();
-    
+
     token.setSaleAgent(preICO);
 
     preICO.setStart(1525132800);
