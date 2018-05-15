@@ -21,15 +21,15 @@ contract PreICO is NextSaleAgentFeature, SoftcapFeature, BASCommonSale {
   bool public extraMinted;
 
   function setBountyTokens(uint newBountyTokens) public onlyOwner {
-    bountyTokensPercent = newBountyTokensPercent;
+    bountyTokens = newBountyTokens;
   }
 
   function setAdvisorsTokens(uint newAdvisorsTokens) public onlyOwner {
-    advisorsTokensPercent = newAdvisorsTokensPercent;
+    advisorsTokens = newAdvisorsTokens;
   }
 
   function setDevelopersTokens(uint newDevelopersTokens) public onlyOwner {
-    developersTokensPercent = newDevelopersTokensPercent;
+    developersTokens = newDevelopersTokens;
   }
 
   function setBountyTokensWallet(address newBountyTokensWallet) public onlyOwner {
@@ -45,7 +45,7 @@ contract PreICO is NextSaleAgentFeature, SoftcapFeature, BASCommonSale {
   }
 
   function mintExtraTokens() public onlyOwner {
-    require(!extraMinted); 
+    require(!extraMinted);
     mintTokens(bountyTokensWallet, bountyTokens);
     mintTokens(advisorsTokensWallet, advisorsTokens);
     mintTokens(developersTokensWallet, developersTokens);
